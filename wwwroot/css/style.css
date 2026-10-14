@@ -1,0 +1,108 @@
+﻿/*css*/
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; 
+}
+
+h1{
+    text-align: center
+}
+
+#todoTitle {
+    width: 85%;
+    padding: 5px;
+    font-size: 16px;
+}
+#todoTitle:focus{
+    outline: 2px solid #007BFF;
+}
+
+button {
+    padding: 5px 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.6;
+}
+
+#todoList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+#todoList li {
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+#todoList li button {
+    margin-left: 10px;
+}
+#todoList li span{
+    flex: 1;
+    margin-left: 10px;
+}
+#todoList li span.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+#todoList li input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+}
+
+.todo-container {
+    width: 430px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.todo-input {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.todo-input input{
+    flex: 1;
+}
+
+#todo-filter {
+    margin-top: 15px;
+    margin-bottom:  10px;
+}
+#todo-filter select{
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+    #todoList{
+        width: 100%;
+    }
+    .todo-container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .todo-input {
+        flex-direction: column;
+    }
+    .todo-input input,
+    .todo-input button{
+        width: 100%;
+    }
+}

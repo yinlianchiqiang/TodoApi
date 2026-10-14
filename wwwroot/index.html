@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<script src= "/js/app.js"></script>
+<html lang="zh-tw">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo List</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Todo List</h1>
+
+            <!--這是一個簡單的 Todo List 網頁，一個ASP.NET + database 的實作。-->
+            
+            <div class="todo-container">
+                <input type="text" id="todoTitle" placeholder="輸入待辦事項...">
+                <button onclick="addTodo()">新增</button>
+            </div>
+
+            <div class="todo-filter">
+                <label for="filter">顯示： </label>
+
+                <select id="filter" onchange="loadTodos()">
+                    <option value="all">全部</option>
+                    <option value="active">未完成</option>
+                    <option value="completed">已完成</option>
+                </select>
+            </div>
+
+            <ul id="todoList"></ul>
+        </div>
+    </body>
+</html>
